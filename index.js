@@ -56,6 +56,7 @@ app.delete("/posts/:id", (req, res) => {
     let {id} = req.params;
     data = data.filter((post) => post.id !== id);
     res.redirect("/posts");
+    console.log("Error");
 })
 app.get("/posts/:id", (req, res) => {
     let {id} = req.params;
