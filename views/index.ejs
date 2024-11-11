@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 class="red">Quora</h1>
+   
+        <% for(e of data){%>  <!-- Changed map to forEach for correct EJS syntax -->
+            <div class="body">
+            <h1 class="ital">@<%= e.username %></h1> <!-- Corrected 'usernaem' to 'username' -->
+            <h1><%= e.content %></h1>
+            <button><a style="text-decoration: none;" href="http://localhost:3000/posts/<%=e.id%>">See</a></button>
+            <button><a style="text-decoration: none;" href="http://localhost:3000/posts/<%=e.id%>/edit">Edit</a></button>
+            <form action="/posts/<%=e.id%>?_method=DELETE" method="post">
+                <button type="submit">Delete</button>
+            </form>
+        </div>
+        <% } %>
+
+        <a href="/posts/new">Create new</a>
+</body>
+</html>

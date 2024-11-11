@@ -1,0 +1,14 @@
+.body {
+  background-color: rgb(225, 164, 164);
+  padding: 2px 0 2px 0;
+  margin: 3px;
+}
+.red {
+  color: darkred;
+}
+.ital {
+  font-style: italic;
+}
+.pad{
+    padding-left: 50px;
+}
